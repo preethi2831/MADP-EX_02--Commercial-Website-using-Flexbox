@@ -1,5 +1,5 @@
 # Ex02 Commercial Website
-## Date:
+## Date: 10/09/2025
 
 ## AIM
 To create a commercial website using CSS Flexbox.
@@ -52,8 +52,231 @@ Upload to GitHub Pages for free hosting.
 
 ## PROGRAM
 
+index.html 
+```
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kurti Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="site-header">
+    <div class="logo">KurtiStore</div>
+    <nav>
+      <ul class="nav">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#products">Kurtis</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#account">Account</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="hero">
+    <h1>Trendy Kurti Collection</h1>
+    <p>Discover your style with our exclusive range of Kurtis</p>
+  </section>
+
+  <!-- Products -->
+  <section id="products" class="products">
+    <h2>Our Kurtis</h2>
+    <div class="product-grid">
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71CvUKLnc9L._AC_UL480_FMwebp_QL65_.jpg" alt="Kurti 1">
+        <h3>Floral Cotton Kurti</h3>
+        <p class="price">₹799</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/81HeT8uUy4L._AC_UL480_FMwebp_QL65_.jpg" alt="Kurti 2">
+        <h3>Printed Rayon Kurti</h3>
+        <p class="price">₹899</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71uJk8o3KBL._AC_UL480_FMwebp_QL65_.jpg" alt="Kurti 3">
+        <h3>Designer Anarkali Kurti</h3>
+        <p class="price">₹1,299</p>
+        <button>Add to Cart</button>
+      </div>
+
+      <div class="product-card">
+        <img src="https://m.media-amazon.com/images/I/71DC1Tz1oZL._AC_UL480_FMwebp_QL65_.jpg" alt="Kurti 4">
+        <h3>Casual Office Kurti</h3>
+        <p class="price">₹699</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="about">
+    <h2>About Us</h2>
+    <p>We bring you the latest and most fashionable Kurtis at affordable prices.</p>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p>Email: support@kurtistore.com</p>
+    <p>Phone: +91 98765 43210</p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 KurtiStore | All Rights Reserved</p>
+    <div class="social">
+      <a href="#">Facebook</a> | 
+      <a href="#">Instagram</a> | 
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+</body>
+</html>
+```
+
+style.css
+```
+/* Global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: #fdfdfd;
+  color: #333;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #6a1b9a;
+  color: #fff;
+}
+.logo {
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+.nav {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+.nav a:hover {
+  color: #ffca28;
+}
+
+/* Hero */
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  background: url('https://images.pexels.com/photos/1550926/pexels-photo-1550926.jpeg') no-repeat center/cover;
+  color: #fff;
+  text-shadow: 1px 1px 5px rgba(0,0,0,0.7);
+  text-align: center;
+}
+
+/* Products */
+.products {
+  padding: 2rem;
+  text-align: center;
+}
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.product-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+}
+.product-card h3 {
+  margin: 0.5rem 0;
+}
+.price {
+  font-size: 1.1rem;
+  color: #6a1b9a;
+  font-weight: bold;
+}
+.product-card button {
+  background: #6a1b9a;
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.product-card button:hover {
+  background: #4a148c;
+}
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+/* About & Contact */
+section {
+  padding: 2rem;
+}
+.about, .contact {
+  background: #f5f5f5;
+  margin: 1rem auto;
+  border-radius: 8px;
+  max-width: 800px;
+  text-align: center;
+}
+
+/* Footer */
+footer {
+  background: #6a1b9a;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+footer .social a {
+  color: #ffca28;
+  text-decoration: none;
+  margin: 0 0.5rem;
+}
+footer .social a:hover {
+  text-decoration: underline;
+}
+```
 
 ## OUTPUT
+
 
 
 ## RESULT
