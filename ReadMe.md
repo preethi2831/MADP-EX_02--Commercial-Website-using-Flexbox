@@ -277,8 +277,7 @@ footer .social a:hover {
 
 ## OUTPUT
 
-
-
+<img width="1899" height="770" alt="Screenshot 2025-09-10 114100" src="https://github.com/user-attachments/assets/6f9f2e0f-2a16-4b3d-8066-495da5afaf33" />
 
 ## RESULT
 The program for creating commercial website using CSS Flexbox is executed successfully.
